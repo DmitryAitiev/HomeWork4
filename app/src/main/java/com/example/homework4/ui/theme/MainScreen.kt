@@ -71,12 +71,18 @@ fun MainScreen() {
                 val info = state.data
                 SuccessScreen(
                     personalInfo = info,
-                    onFirstNameChange = viewModel::setFirstName,
-                    onLastNameChange = viewModel::setLastName,
+                    onFirstNameChange = {
+                        viewModel.setFirstName(it)
+                    },
+                    onLastNameChange = {
+                        viewModel.setLastName(it)
+                    },
                     onDateOfBirthChange = {
                         viewModel.setDateOfBirth(it)
                     },
-                    onSexChange = viewModel::setSex,
+                    onSexChange = {
+                        viewModel.setSex(it)
+                    },
                     onTriggerError = viewModel::triggerError
                 )
             }

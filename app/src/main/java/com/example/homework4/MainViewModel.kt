@@ -28,25 +28,25 @@ class MainViewModel: ViewModel() {
 
     fun setFirstName(value: String) {
         personInfo = personInfo.copy(firstName = value)
-        refreshSuccessStateIfNeeded()
+        refreshSuccessState()
     }
 
     fun setLastName(value: String) {
         personInfo = personInfo.copy(lastName = value)
-        refreshSuccessStateIfNeeded()
+        refreshSuccessState()
     }
 
     fun setDateOfBirth(value: String) {
         personInfo = personInfo.copy(dateOfBirth = value)
-        refreshSuccessStateIfNeeded()
+        refreshSuccessState()
     }
 
     fun setSex(value: String) {
         personInfo = personInfo.copy(selectedSex = value)
-        refreshSuccessStateIfNeeded()
+        refreshSuccessState()
     }
 
-    private fun refreshSuccessStateIfNeeded() {
+    private fun refreshSuccessState() {
         val current = _uiState.value
         if (current is UIState.Success) {
             _uiState.value = current.copy(data = personInfo)
