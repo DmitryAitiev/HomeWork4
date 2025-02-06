@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HomeWork4</string>
+    <string name="back_text">Вернуться</string>
+    <string name="title">Tell us more about you</string>
+    <string name="first_name">First name</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="call_error">Вызвать ошибку</string>
+</resources>
